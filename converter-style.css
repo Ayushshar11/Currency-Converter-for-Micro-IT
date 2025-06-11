@@ -1,0 +1,105 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container styling */
+.app-container {
+  text-align: center;
+  width: 100%;
+  max-width: 480px;
+  padding: 20px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+/* Converter card with glass effect */
+.converter-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Input & select styles */
+.converter-card input,
+.converter-card select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  color: #222; /* DARKER TEXT */
+  background: rgba(255, 255, 255, 0.9); /* MORE OPAQUE */
+  outline: none;
+  font-weight: 500;
+  appearance: none;
+}
+
+.converter-card input::placeholder {
+  color: #666;
+}
+
+/* Style select dropdown arrow */
+select {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23333' d='M6 8L0 0h12L6 8z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+}
+
+/* Flex row for currency dropdowns */
+.currency-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Button style */
+.converter-card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(to right, #43e97b, #38f9d7);
+  color: #222;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.converter-card button:hover {
+  background: linear-gradient(to right, #38f9d7, #43e97b);
+  transform: scale(1.02);
+}
+
+/* Result output */
+.result-box {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
